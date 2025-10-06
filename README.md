@@ -14,5 +14,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-===MY GitHub Stats===
+##MY GitHub Stats
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LukoOG)
