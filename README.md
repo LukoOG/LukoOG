@@ -51,3 +51,9 @@ Here are some ideas to get you started:
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LukoOG&theme=radical&hide_border=false&layout=compact" />
   </a>
 </p>
+
+<p>
+  <a href="https://github.com/LukoOG">
+    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/github-metrics.svg" />
+  </a>
+</p>
