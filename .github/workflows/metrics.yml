@@ -30,7 +30,11 @@ jobs:
       - name: Generate streak stats
         run: |
           curl "https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=radical&cache_seconds=86400" -o profile/streak.svg
-
+          
+      - name: Generate LeetCode stats
+        run: |
+          curl "https://leetcard.jacoblin.cool/LukoOG?theme=dark&ext=heatmap" -o profile/leetcode.svg
+          
       - name: Commit cards
         run: |
           git config user.name "github-actions"
@@ -38,7 +42,3 @@ jobs:
           git add profile/*.svg
           git commit -m "Update README cards" || exit 0
           git push
-          
-      - name: Generate LeetCode stats
-        run: |
-          curl "https://leetcard.jacoblin.cool/LukoOG?theme=dark&ext=heatmap" -o profile/leetcode.svg
