@@ -39,17 +39,16 @@ Here are some ideas to get you started:
 -->
 ## 📊 My GitHub Stats
 <p align="center">
-  <a href="https://github.com/LukoOG">
-    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/stats.svg" />
-  </a>
-  
-  <a href="https://github.com/LukoOG">
-    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/streak.svg" />
-  </a>
-  
-  <a href="https://github.com/LukoOG">
-    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/top-langs.svg" />
-  </a>
+  <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/stats.svg" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/streak.svg" />
+  <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/top-langs.svg" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/leetcode.svg" />
 </p>
 
 <!-- <p>
