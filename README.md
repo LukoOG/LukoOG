@@ -38,23 +38,17 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ## 📊 My GitHub Stats
-<!-- <p align="center">
-  <a href="https://github.com/LukoOG">
-    <img src="https://github-readme-stats.vercel.app/api/?username=LukoOG&theme=radical" />
-  </a>
-  
-  <a href="https://github.com/LukoOG">
-    <img src="https://nirzak-streak-stats.vercel.app/?user=LukoOG&theme=radical&hide_border=false" />
-  </a>
-  
-  <a href="https://github.com/LukoOG">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LukoOG&theme=radical&hide_border=false&layout=compact" />
-  </a>
-</p> -->
-
 <p align="center">
   <a href="https://github.com/LukoOG">
     <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/stats.svg" />
+  </a>
+  
+  <a href="https://github.com/LukoOG">
+    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/streak.svg" />
+  </a>
+  
+  <a href="https://github.com/LukoOG">
+    <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/profile/top-langs.svg" />
   </a>
 </p>
 
