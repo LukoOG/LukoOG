@@ -52,8 +52,8 @@ Here are some ideas to get you started:
   </a>
 </p>
 
-<p>
+<!-- <p>
   <a href="https://github.com/LukoOG">
     <img src="https://raw.githubusercontent.com/LukoOG/LukoOG/main/github-metrics.svg" />
   </a>
-</p>
+</p> -->
