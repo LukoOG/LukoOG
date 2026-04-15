@@ -41,4 +41,4 @@ jobs:
           
       - name: Generate LeetCode stats
         run: |
-          curl "https://leetcard.jacoblin.cool/YOUR_LEETCODE_USERNAME?theme=dark&ext=heatmap" -o profile/leetcode.svg
+          curl "https://leetcard.jacoblin.cool/LukoOG?theme=dark&ext=heatmap" -o profile/leetcode.svg
