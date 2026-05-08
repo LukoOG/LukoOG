@@ -4,6 +4,11 @@
 
 ## 🛠️ Technical Expertise
 
+### **Languages**
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=white)
+![Typescript](https://shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)
+![Rust](https://shields.io/badge/-Rust-B7410E?style=for-the-badge&logo=rust&logoColor=white)
+
 ### **Backend Development**
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
