@@ -23,7 +23,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&theme=radical&lang_count=10&hide=html,css,javascript&exclude_repo=scholarArk-backend
+          options: username=${{ github.repository_owner }}&layout=compact&theme=radical&lang_count=10&hide=html,css,javascript&exclude_repo=LukoOG/scholarArk-backend
           path: profile/top-langs.svg
           token: ${{ secrets.METRICS_TOKEN }}
 
