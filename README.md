@@ -1,6 +1,12 @@
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&pause=1000&color=808080&center=true&vCenter=true&width=650&lines=I'm+Emmanuel+Adesipe;Full+Stack+Developer;Building+Real+World+Solutions+" />
+</p>
+
 ## Hi there 👋
 
 👋 Hello, Sipe here. I design and build full-stack solutions that scale fast, are secure, and reliable.
+
 
 ## 🛠️ Technical Expertise
 
