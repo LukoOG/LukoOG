@@ -5,9 +5,13 @@ on:
     - cron: "0 3 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -18,6 +22,7 @@ jobs:
           options: username=${{ github.repository_owner }}&show_icons=true&theme=radical
           path: profile/stats.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          fail_on_error: true
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -26,19 +31,59 @@ jobs:
           options: username=${{ github.repository_owner }}&layout=compact&theme=radical&lang_count=10&hide=html,css,javascript&exclude_repo=scholarArk-backend
           path: profile/top-langs.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          fail_on_error: true
 
       - name: Generate streak stats
+        continue-on-error: true
         run: |
-          curl "https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=radical&cache_seconds=86400" -o profile/streak.svg
-          
+          set -eu
+
+          tmp="$(mktemp)"
+          trap 'rm -f "$tmp"' EXIT
+
+          if curl --fail --silent --show-error --location \
+            --retry 2 --retry-delay 3 \
+            "https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=radical&cache_seconds=86400" \
+            -o "$tmp" &&
+            grep -q '<svg' "$tmp" &&
+            ! grep -Eiq 'rate.?limit|too many requests|something went wrong|error occurred' "$tmp"; then
+            cp "$tmp" profile/streak.svg
+            echo "Streak card updated."
+          else
+            echo "Streak card failed validation; keeping existing card."
+          fi
+
       - name: Generate LeetCode stats
+        continue-on-error: true
         run: |
-          curl "https://leetcard.jacoblin.cool/LukoOG?theme=dark&ext=heatmap" -o profile/leetcode.svg
-          
-      - name: Commit cards
+          set -eu
+
+          tmp="$(mktemp)"
+          trap 'rm -f "$tmp"' EXIT
+
+          if curl --fail --silent --show-error --location \
+            --retry 2 --retry-delay 3 \
+            "https://leetcard.jacoblin.cool/LukoOG?theme=dark&ext=heatmap" \
+            -o "$tmp" &&
+            grep -q '<svg' "$tmp" &&
+            ! grep -Eiq 'rate.?limit|too many requests|something went wrong|error occurred' "$tmp"; then
+            cp "$tmp" profile/leetcode.svg
+            echo "LeetCode card updated."
+          else
+            echo "LeetCode card failed validation; keeping existing card."
+          fi
+
+      - name: Commit updated cards
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
+
           git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+
+          if git diff --cached --quiet; then
+            echo "No cards changed."
+            exit 0
+          fi
+
+          git commit -m "Update README cards"
           git push
